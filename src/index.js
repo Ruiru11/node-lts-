@@ -4,7 +4,7 @@ const resolvers = require("./resolvers");
 const { createStore } = require("./utils");
 
 const ChuckCategoryApi = require("./dataSources/chuckCategories");
-const UserData = require("./datasources/users");
+const UserData = require("./dataSources/users");
 
 const mongoose = require("mongoose");
 
