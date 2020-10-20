@@ -1,0 +1,31 @@
+{
+  "name": "lts-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruiru11/node-lts-.git"
+  },
+  "author": "Erastus ruiru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ruiru11/node-lts-/issues"
+  },
+  "homepage": "https://github.com/Ruiru11/node-lts-#readme",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.9.4",
+    "apollo-server": "^2.18.2",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.9",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
