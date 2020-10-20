@@ -4,6 +4,8 @@ const resolvers = require("./resolvers");
 const { createStore } = require("./utils");
 
 const ChuckCategoryApi = require("./dataSources/chuckCategories");
+const UserData = require("./datasources/users");
+
 const mongoose = require("mongoose");
 
 // initialise store
@@ -25,7 +27,7 @@ const server = new ApolloServer({
   resolvers,
   dataSources: () => ({
     CategoryApi: new ChuckCategoryApi(),
-    // userAPI: new UserAPI({ store }),
+    UserData: new UserData({ store }),
   }),
 });
 
