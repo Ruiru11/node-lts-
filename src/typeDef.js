@@ -17,7 +17,6 @@ type RandomJoke {
  
 }
 
-
 type User {
   id: ID!
   username: String!
