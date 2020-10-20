@@ -1,17 +1,16 @@
 const { ApolloServer } = require("apollo-server");
-const typeDefs = require("./schema");
+const typeDefs = require("./typeDef");
 const resolvers = require("./resolvers");
 const { createStore } = require("./utils");
 
-const TVShowAPI = require("./datasources/tv");
-const UserAPI = require("./datasources/user");
+const ChuckCategoryApi = require("./dataSources/chuckCategories");
 const mongoose = require("mongoose");
 
 // initialise store
 const store = createStore();
 
-// connect to mongo db
-mongoose.connect("mongodb+srv://nic:nic@cluster0.n20mo.mongodb.net/tv-mazer?retryWrites=true&w=majority", {
+// mongo db connection 
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -23,8 +22,8 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources: () => ({
-    tvShowAPI: new TVShowAPI(),
-    userAPI: new UserAPI({ store }),
+    CategoryApi: new ChuckCategoryApi(),
+    // userAPI: new UserAPI({ store }),
   }),
 });
 

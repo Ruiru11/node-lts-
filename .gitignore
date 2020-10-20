@@ -16,4 +16,6 @@ jspm_packages/
 typings/
 
 
+.env
+
 
